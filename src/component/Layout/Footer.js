@@ -8,13 +8,13 @@ const Footer = () => {
   return (
     <>
       <Box
-        sx={{ textAlign: "center", bgcolor: "#1A1A19", color: "white", p: 3 }}
+        sx={{ textAlign: "center", bgcolor: "#1A1A19", color: "white", p: 2 }}
       >
         <Box
           sx={{
-            my: 3,
+            my: 1,
             "& svg": {
-              fontSize: "60px",
+              fontSize: "30px",
               cursor: "pointer",
               mr: 2,
             },
@@ -33,7 +33,7 @@ const Footer = () => {
           <YouTubeIcon />
         </Box>
         <Typography
-          variant="h5"
+          variant="h6"
           sx={{
             "@media (max-width:600px)": {
               fontSize: "1rem",
