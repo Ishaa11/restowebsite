@@ -18,7 +18,7 @@ const Menu = () => {
           <Card sx={{ maxWidth: "390px", display: "flex", m: 2 }}>
             <CardActionArea>
               <CardMedia
-                sx={{ minHeight: "400px" }}
+                sx={{ minHeight: "390px" }}
                 component={"img"}
                 src={menu.image}
                 alt={menu.name}
