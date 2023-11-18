@@ -70,7 +70,7 @@ const Contact = () => {
                   fullWidth
                   sx={{my: 3}}
                 >
-                  Contact
+                  Contact Us
                 </Button>
               </Grid>
             </Grid>
