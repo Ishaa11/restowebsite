@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Layout from "../component/Layout/Layout";
 import {
   Box,
@@ -10,9 +10,30 @@ import {
 } from "@mui/material";
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    fullName: '',
+    email: '',
+    message: ''
+  });
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission logic here
+    
+    alert("Message sent. Will contact you soon!!")
+
+    setFormData({
+      fullName: '',
+      email: '',
+      message: ''
+    });
+  };
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value
+    });
   };
 
   return (
@@ -26,13 +47,12 @@ const Contact = () => {
       <Box
         sx={{
           m: 3,
-          width: "100%", // Adjust the width as needed
+          width: "100%",
           maxWidth: "600px",
           margin: "auto",
-          
         }}
       >
-        <Container maxWidth="sm" sx={{ ml:8}}>
+        <Container maxWidth="sm" sx={{ ml: 8 }}>
           <form onSubmit={handleSubmit}>
             <Grid container spacing={2}>
               <Grid item xs={10}>
@@ -41,6 +61,9 @@ const Contact = () => {
                   variant="outlined"
                   fullWidth
                   required
+                  name="fullName"
+                  value={formData.fullName}
+                  onChange={handleInputChange}
                 />
               </Grid>
               <Grid item xs={10}>
@@ -50,6 +73,9 @@ const Contact = () => {
                   fullWidth
                   type="email"
                   required
+                  name="email"
+                  value={formData.email}
+                  onChange={handleInputChange}
                 />
               </Grid>
               <Grid item xs={10}>
@@ -57,9 +83,12 @@ const Contact = () => {
                   label="Message"
                   variant="outlined"
                   multiline
-                  rows={3} // Adjust the number of rows as needed
+                  rows={3}
                   fullWidth
                   required
+                  name="message"
+                  value={formData.message}
+                  onChange={handleInputChange}
                 />
               </Grid>
               <Grid item xs={10}>
@@ -68,7 +97,7 @@ const Contact = () => {
                   color="primary"
                   type="submit"
                   fullWidth
-                  sx={{my: 3}}
+                  sx={{ my: 3 }}
                 >
                   Contact Us
                 </Button>
