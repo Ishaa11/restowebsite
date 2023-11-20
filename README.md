@@ -1,8 +1,8 @@
-### Demo Restaurent Website
+# Demo Restaurent Website
 
 It is a demo project which is made using ReactJs and material ui to provide a modern ui to a restuarent website.
 
-# To start app
+### To start app
 npm start
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
