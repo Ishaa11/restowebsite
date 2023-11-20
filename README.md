@@ -4,7 +4,7 @@ It is a demo project which is made using ReactJs and material ui to provide a mo
 
 # To start app
 npm start
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 
 ![Screenshot (41)](https://github.com/Ishaa11/restowebsite/assets/64044485/96183d3d-0a7c-47a0-bf0c-fd4f1cb4d27e)
